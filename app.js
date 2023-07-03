@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const logger = require('morgan');
 const hbs = require('hbs');
@@ -5,6 +6,8 @@ const hbs = require('hbs');
 const app = express();
 
 require("./config/db.config");
+
+console.log(process.env.SECRET)
 
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: false }));
