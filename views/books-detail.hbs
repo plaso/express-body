@@ -1,0 +1,7 @@
+<h1>{{book.name}}</h1>
+<h2>{{book.author}}</h2>
+<p>{{book.description}}</p>
+
+<form method="POST" action="/books/{{book._id}}/delete">
+  <button class="btn btn-danger">Delete</button>
+</form>

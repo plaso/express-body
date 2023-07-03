@@ -1,0 +1,18 @@
+<form action="/books" method="GET">
+  <div class="mb-3">
+    <label for="author" class="form-label">Author</label>
+    <input type="text" class="form-control" id="author" name="author" value="{{author}}">
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>
+
+{{#each books}}
+  <h1>{{name}}</h1>
+  <h2>{{author}}</h2>
+  <p>{{description}}</p>
+  <a href="/books/{{_id}}">See more details</a>
+{{/each}}
+
+<div>
+  <a class="btn btn-success" href="/books/create">Create a new book</a>
+</div>
